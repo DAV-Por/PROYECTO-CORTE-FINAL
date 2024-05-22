@@ -14,9 +14,11 @@ public class Login {
         this.Usuarios = usuarios;
     }
 
-    public String Verificion(String variable) {
-        return Usuarios.getOrDefault(variable, "");
+    public Map<String, String> base() {
+        return Usuarios;
     }
+
+
 
 
 }
