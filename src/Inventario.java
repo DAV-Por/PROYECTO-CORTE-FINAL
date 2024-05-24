@@ -1,5 +1,3 @@
-package src;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +33,7 @@ public class Inventario {
 
     public void mostrarInventario(){
         for (Producto producto : Productos.values()) {
-            System.out.println("\nNombre: "+ producto.getNombre() +"\nId: "+producto.getId()+"\nPrecio: "+producto.getPrecio()+"\nStock: "+producto.getStock()+"\nDescripcion: "+producto.getStock());
+            System.out.println("\nNombre: "+ producto.getNombre() +"\nId: "+producto.getId()+"\nPrecio: "+producto.getPrecio()+"\nStock: "+producto.getStock()+"\nDescripcion: "+producto.getDescripcion());
         }
     }
 
