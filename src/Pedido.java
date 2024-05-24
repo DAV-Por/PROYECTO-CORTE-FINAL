@@ -63,10 +63,10 @@ public class Pedido {
 
 
     public void mostrarInformacionPedido() {
-        System.out.println("id pedido: " + idPedido);
-        System.out.println("estado: " + estado);
-        System.out.println("fecha y hora: " + fechaHora);
-        System.out.println("productos solicitados:");
+        System.out.println("ID pedido: " + idPedido);
+        System.out.println("Estado: " + estado);
+        System.out.println("Fecha y hora: " + fechaHora);
+        System.out.println("Productos solicitados:");
         for (Producto producto : productosSolicitados) {
             System.out.println(" " + producto.getNombre() + " id: " + producto.getId() + " ");
         }

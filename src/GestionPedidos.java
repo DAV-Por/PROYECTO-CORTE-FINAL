@@ -18,7 +18,7 @@ public class GestionPedidos {
         Pedido pedido = this.pedidos.get(idPedido);
         if (pedido != null) {
             pedido.cambiarEstado("enviado");
-            System.out.println("rl pedido con id: " + idPedido + " ha sido enviado.");
+            System.out.println("El pedido con id: " + idPedido + " ha sido enviado.");
         } else {
             System.out.println("no se encontrooel pedido : " + idPedido);
         }
