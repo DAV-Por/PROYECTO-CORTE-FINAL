@@ -1,11 +1,11 @@
 public class Usuario {
     String nombreUsuario, password;
     Rol rol;
-    Usuario administrador = new Administrador("Juan","Admin123",rol.ADMINISTRADOR);
+    /*Usuario administrador = new Administrador("Juan","Admin123",rol.ADMINISTRADOR);
     Usuario contador = new Contador("Felipe","Contador123",rol.CONTADOR);
-    Usuario mercadero = new Mercadero("Cesar","Mercadero123", Rol.MERCADERO);
+    Usuario mercadero = new Mercadero("Cesar","Mercadero123", rol.MERCADERO);
     public Usuario() {
-    }
+    }*/
 
     public Usuario(String nombreUsuario, String password, Rol rol) {
         this.nombreUsuario = nombreUsuario;
