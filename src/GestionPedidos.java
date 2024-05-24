@@ -43,4 +43,9 @@ public class GestionPedidos {
             System.out.println("no se encontro el pedido : " + idPedido);
         }
     }
+
+    public Map<Integer, Pedido> getPedidos() {
+        return pedidos;
+
+    }
 }
