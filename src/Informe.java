@@ -1,6 +1,4 @@
 
-
-package src;
 import java.util.Map;
 
 public class Informe {
