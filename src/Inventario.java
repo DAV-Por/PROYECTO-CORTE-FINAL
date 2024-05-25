@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Inventario {
+public class  Inventario {
     public Map<Integer,Producto> Productos = new HashMap<>();
     public Inventario() {
         Productos = new HashMap<>();
