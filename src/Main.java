@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        GestionPedidos gestionPedidos = new GestionPedidos();
+        Pedido pedido = new Pedido();
+        Inventario inventario = new Inventario();
         // Llamar al array de usuarios
         Usuario[] usuarios = {new Usuario("Juan", "Admin123", Usuario.Rol.ADMINISTRADOR),
                 new Usuario("Felipe", "Contador123", Usuario.Rol.CONTADOR),
@@ -32,7 +35,7 @@ public class Main {
             switch (usuario.getRol()) {
                 case ADMINISTRADOR:
                     System.out.println("Acciones disponibles para el rol ADMINISTRADOR:");
-
+                    // Aquí puedes agregar acciones específicas para el administrador
                     break;
                 case CONTADOR:
 
@@ -58,9 +61,49 @@ public class Main {
                     -No puede gestionar pedidos ni confirmar envíos.*/
                     break;
                 case MERCADERO:
+                    System.out.println("Acciones disponibles para el rol MERCADERO:");
+                    System.out.println("****Menu Mercadero*****\n****BIENVENIDO****");
+                    System.out.println("1. ver inventario de productos");
+                    System.out.println("2. gestionar pedidos ");
+                    System.out.println("3. confirmar envios");
+                    System.out.println("--->");
+
+                    opcion = scanner.nextInt();
+
+                    // Aquí puedes agregar acciones específicas para el mercadero
+
+                    //Puede ver el inventario de productos.
+                    //Puede gestionar pedidos y confirmar envíos.
+                    //No puede modificar el inventario ni generar informes.
+
+                    switch (opcion){
+                        case 1:
+                            inventario.mostrarInventario();
 
 
-                    break;
+
+                        case 2:
+                            System.out.println("***Gestion de Pedidos***");
+                            System.out.println("1. Mostrar informacion de pedido");
+                            System.out.println("2 Agregar pedido");
+                            System.out.println("3 Enviar pedido");
+                            System.out.println("4. Entregar pedido");
+                            System.out.println("5 Devolver pedido");
+                            int opcionGetionPedidos = scanner.nextInt();
+                            switch (opcionGetionPedidos){
+                                case 1:
+                                    pedido.mostrarInformacionPedido();
+                                    break;
+                                case 2:
+                                    gestionPedidos.agregarPedido(pedido);
+                                    break;
+                                case 3:
+                                    gestionPedidos.enviarPedido(pedido.getIdPedido());
+                                    break;
+                                }
+
+                            }
+                            break;
             }
         } else {
             System.out.println("Usuario o contraseña incorrectos, vuelvelo a intentar mas tarde");
