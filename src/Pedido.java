@@ -7,16 +7,20 @@ import java.util.List;
 public class Pedido {
 
     //ola
-    private int idPedido;
-    private List<Producto> productosSolicitados;
-    private String estado;
-    private Date fechaHora;
+    private static int idPedido;
+    private static List<Producto> productosSolicitados;
+    private static String estado;
+    private static Date fechaHora;
 
     public Pedido(int idPedido) {
         this.idPedido = idPedido;
         this.productosSolicitados = new ArrayList<>();
         this.estado = "pendiente";
         this.fechaHora = new Date();
+    }
+
+    public Pedido() {
+
     }
 
     public int getIdPedido() {
@@ -62,7 +66,7 @@ public class Pedido {
     }
 
 
-    public void mostrarInformacionPedido() {
+    public static void mostrarInformacionPedido() {
         System.out.println("ID pedido: " + idPedido);
         System.out.println("Estado: " + estado);
         System.out.println("Fecha y hora: " + fechaHora);
