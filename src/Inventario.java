@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class  Inventario {
-    public Map<Integer,Producto> Productos = new HashMap<>();
+    public static Map<Integer,Producto> Productos = new HashMap<>();
     public Inventario() {
         Productos = new HashMap<>();
         inventarioInicial();
@@ -31,7 +31,7 @@ public class  Inventario {
         return existe ? Productos.get(producto) : null;
     }
 
-    public void mostrarInventario(){
+    public static void mostrarInventario(){
         for (Producto producto : Productos.values()) {
             System.out.println("\nNombre: "+ producto.getNombre() +"\nId: "+producto.getId()+"\nPrecio: "+producto.getPrecio()+"\nStock: "+producto.getStock()+"\nDescripcion: "+producto.getDescripcion());
         }
