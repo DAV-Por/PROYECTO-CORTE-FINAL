@@ -32,15 +32,34 @@ public class Main {
             switch (usuario.getRol()) {
                 case ADMINISTRADOR:
                     System.out.println("Acciones disponibles para el rol ADMINISTRADOR:");
-                    // Aquí puedes agregar acciones específicas para el administrador
+
                     break;
                 case CONTADOR:
-                    System.out.println("Acciones disponibles para el rol CONTADOR:");
-                    // Aquí puedes agregar acciones específicas para el contador
+
+                    System.out.println("***MENU CONTADOR***\n***BIENVENIDO***");
+                    System.out.println("1. Ver el inventario");
+                    System.out.println("2. Generar informe de inventario");
+                    System.out.println("3. Generar informe de ventas");
+                    System.out.println("-->");
+                    int opcion = scanner.nextInt();
+                    switch (opcion){
+                        case 1:
+                            Inventario.mostrarInventario();
+                        case 2:
+                            Informe.generarInformeInventario();
+                        case 3:
+                            Informe.generarInformeVentas();
+                    }
+
+                    /*Contador
+                    -Acceso limitado al sistema.
+                    -Puede ver el inventario de productos.
+                    -Puede generar informes de inventario.
+                    -No puede gestionar pedidos ni confirmar envíos.*/
                     break;
                 case MERCADERO:
-                    System.out.println("Acciones disponibles para el rol MERCADERO:");
-                    // Aquí puedes agregar acciones específicas para el mercadero
+
+
                     break;
             }
         } else {

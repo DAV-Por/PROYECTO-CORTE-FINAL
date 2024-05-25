@@ -23,7 +23,6 @@ public class Usuario {
 
     public boolean Login(String nombreUsuarioIngresado, String passwordIngresado) {
         if (nombreUsuarioIngresado.equals(nombreUsuario) && passwordIngresado.equals(password)) {
-            System.out.println("Inicio de sesion exitoso\nBienvenido :" + nombreUsuario + " " + rol);
             return true;
         } else {
             return false;
