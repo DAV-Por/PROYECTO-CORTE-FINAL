@@ -4,13 +4,13 @@ import java.util.Map;
 public class Informe {
 
 
-    private static GestionPedidos gestionPedidos;
-    private static Inventario inventario;
+    static GestionPedidos gestionPedidos = new GestionPedidos();
+    static Inventario inventario = new Inventario();
 
 
     public Informe(GestionPedidos gestionPedidos, Inventario inventario) {
-        this.gestionPedidos = gestionPedidos;
-        this.inventario = inventario;
+        Informe.gestionPedidos = gestionPedidos;
+        Informe.inventario = inventario;
     }
 
     public static void generarInformeVentas() {
